@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(cookieparser())
 app.use(cors({
     origin: ["http://localhost:5173",
-        "frontend-ecom-six.vercel.app"
+        "https://frontend-ecom-six.vercel.app"
     ],
     credentials: true
 }));
