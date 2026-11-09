@@ -1,11 +1,11 @@
-import api from "../../../config/API/Api";
+import Api from "../../../config/API/Api";
 import {toast} from "react-toastify"
 
 export const handleLogin = async(data) => {
 
     try {
         
-        const response = await api.post("/auth/login" , data)
+        const response = await Api.post("/auth/login" , data)
          
         console.log(response.data);
         toast.success(response.data.message || "Login SuccessFully")
@@ -22,7 +22,7 @@ export const handleRegister = async(data) =>{
 
     try {
         
-        const response = await api.post("/auth/register", data)
+        const response = await Api.post("/auth/register", data)
         console.log(response.data);
         toast.success(response.data.message || "Register SuccessFully")
 

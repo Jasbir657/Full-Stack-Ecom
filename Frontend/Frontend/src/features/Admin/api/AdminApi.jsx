@@ -1,10 +1,10 @@
-import api from "../../../config/API/Api"
+import Api from "../../../config/API/Api"
 
 
 export const registerProductapi  = async(data , accessToken) =>{
 
     try {
-         const response = await api.post("/products/createProduct" , data , {
+         const response = await Api.post("/products/createProduct" , data , {
             headers : {
                 Authorization : `Bearer ${accessToken}`
             }
@@ -25,7 +25,7 @@ export const deleteProductapi = async (id , accessToken)=>{
 
     try {
         
-        const response = await api.delete(`/products/deleteProducts/${id}`, {
+        const response = await Api.delete(`/products/deleteProducts/${id}`, {
             headers : {
                 Authorization :  `Bearer ${accessToken}`
             },
@@ -43,7 +43,7 @@ export const updateProductapi = async (id , data , accessToken)=>{
 
     try {
 
-        const response = await api.patch(`/products/updateProducts/${id}`, data , {
+        const response = await Api.patch(`/products/updateProducts/${id}`, data , {
             headers : {
             Authorization : `Bearer ${accessToken}`
             }}
