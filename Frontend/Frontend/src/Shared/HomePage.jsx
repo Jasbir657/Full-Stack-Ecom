@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import Navbar from "./Navbar";
 import {
     ArrowRight,
@@ -36,10 +37,10 @@ const HomePage = () => {
                             and everything you need in one place.
                         </p>
 
-                        <button className="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-xl flex items-center gap-3 transition">
+                        <NavLink to={"/home/products"} className="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-xl flex items-center gap-3 transition">
                             Shop Now
                             <ArrowRight size={19} />
-                        </button>
+                        </NavLink>
 
                     </div>
 
