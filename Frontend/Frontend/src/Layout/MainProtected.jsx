@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { Navigate, Outlet } from "react-router"
+import LoadingPage from "../Shared/LoadingPage";
 
 const MainProtected = () => {
   
@@ -8,7 +9,7 @@ const MainProtected = () => {
   
 
 if(isLoading){
-  return <h1> Loading</h1>
+  return <LoadingPage/>
 }
 
 if(isAuthenticated){
